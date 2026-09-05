@@ -2,13 +2,15 @@
 
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
+import { ListMusic, Pause, Play, SkipBack, SkipForward } from "lucide-react";
 
 type PlaybackControlsProps = {
   isPlaying: boolean;
   onPrev: () => void;
   onPlayToggle: () => void;
   onNext: () => void;
+  onPlaylistToggle: () => void;
+  playlistOpen: boolean;
 };
 
 export function PlaybackControls({
@@ -16,6 +18,8 @@ export function PlaybackControls({
   onPrev,
   onPlayToggle,
   onNext,
+  onPlaylistToggle,
+  playlistOpen,
 }: PlaybackControlsProps) {
   return (
     <div className="flex items-center gap-2 sm:gap-3">
@@ -29,6 +33,10 @@ export function PlaybackControls({
 
       <ControlButton label="Next" onClick={onNext}>
         <SkipForward size={16} />
+      </ControlButton>
+
+      <ControlButton label={playlistOpen ? "Close playlist" : "Open playlist"} onClick={onPlaylistToggle}>
+        <ListMusic size={16} />
       </ControlButton>
     </div>
   );
