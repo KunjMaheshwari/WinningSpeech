@@ -1,4 +1,4 @@
-# OG Websites — Karan Aujla Music Experience
+# WinningSpeech — Karan Aujla Music Experience
 
 > A cinematic, responsive music experience built with Next.js, React and TypeScript, featuring a custom local-audio player and playlist architecture.
 
@@ -9,22 +9,35 @@
 <p align="center">
   <img
     src="./public/images/hero/applicationUI.png"
-    alt="OG Websites — Application UI"
+    alt="WinningSpeech — Application UI"
     width="100%"
   />
 </p>
 
+<p align="center">
+  <strong>🎵 Experience the website live</strong>
+</p>
+
+<p align="center">
+  <a href="https://kunjgymplaylist.vercel.app/">Live Demo →</a>
+</p>
+
+---
+
 ## Overview
 
-**OG Websites** is an independent, music-focused web experience inspired by the visual language of contemporary Punjabi music culture.
+**WinningSpeech** is an independent, music-focused web experience inspired by the visual language of contemporary Punjabi music culture.
 
-The project combines an immersive cinematic interface with a custom browser-based music player. It is designed to grow from an artist-inspired landing page into a richer music experience with playlists, search, favorites, shuffle/repeat, visualizers, release pages and other features.
+The project combines an immersive cinematic interface with a custom browser-based music player. It is designed to evolve from an artist-inspired landing page into a richer music experience with playlists, search, favorites, shuffle/repeat, visualizers, release pages and other features.
 
 > **Important:** This is an independent project and should not be represented as an official Karan Aujla website without authorization. Only use music, artwork, photographs, trademarks and other copyrighted material that you are legally permitted to use.
 
-## Features
+## ✨ Features
 
 ### 🎵 Custom Music Player
+
+The application includes a custom music player designed to integrate naturally with the site's visual identity.
+
 - Play / Pause
 - Previous / Next
 - Automatic next-track playback
@@ -36,45 +49,64 @@ The project combines an immersive cinematic interface with a custom browser-base
 - Local MP3 playback
 
 ### 📜 Playlist
-Audio files can be stored in `public/audio/` and exposed through the application's playlist.
 
-The playlist is designed to support:
+Audio files stored in `public/audio/` can be exposed through the application's playlist.
+
+The playlist supports:
+
 - Direct song selection
 - Current-track highlighting
 - Track switching
 - Artist/title metadata
-- Large playlists
-- Desktop and touch/mobile interaction
+- Multiple songs
+- Desktop interaction
+- Touch/mobile interaction
 
 ### 🎨 Cinematic UI
+
+The interface focuses on an immersive, minimal, dark aesthetic with:
+
 - Full-screen hero artwork
 - Layered typography
 - Atmospheric visual treatment
-- Dark, minimal aesthetic
-- Responsive layout
-- Integrated bottom music player
+- Responsive positioning
+- Minimal navigation
+- Integrated bottom music-player experience
 
 ### 📱 Responsive Experience
-Designed for desktop, laptop, tablet and mobile screens.
 
-## Technology Stack
+Designed for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+Interactive controls are designed to remain accessible and touch-friendly on smaller screens.
+
+---
+
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Next.js | React application framework |
-| React | UI and component architecture |
-| TypeScript | Type-safe development |
-| CSS | Styling and responsive design |
-| HTML5 Audio API | Local music playback |
-| Node.js | Runtime/development |
-| npm | Package management |
+| **Next.js** | React application framework |
+| **React** | UI and component architecture |
+| **TypeScript** | Type-safe development |
+| **CSS** | Styling and responsive design |
+| **HTML5 Audio API** | Local music playback |
+| **Node.js** | Runtime and development environment |
+| **npm** | Package management |
+| **Vercel** | Deployment |
 
 Exact dependency versions are defined in `package.json`.
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```text
-ogwebsites/
+WinningSpeech/
 ├── app/
 │   ├── components/
 │   │   └── hero/
@@ -87,22 +119,29 @@ ogwebsites/
 │   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
+│
 ├── public/
 │   ├── audio/
-│   │   ├── track1.mp3
-│   │   ├── track2.mp3
+│   │   ├── *.mp3
 │   │   └── ...
+│   │
 │   └── images/
 │       └── hero/
+│           ├── applicationUI.png
 │           └── master-reference.png
+│
 ├── package.json
+├── package-lock.json
 ├── tsconfig.json
+├── next.config.*
 └── README.md
 ```
 
-The repository structure may evolve as new features are added.
+> The repository structure may evolve as new features are added.
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -120,8 +159,8 @@ npm --version
 ### Installation
 
 ```bash
-git clone https://github.com/KunjMaheshwari/ogwebsite.git
-cd ogwebsite
+git clone https://github.com/KunjMaheshwari/WinningSpeech.git
+cd WinningSpeech
 npm install
 ```
 
@@ -137,9 +176,11 @@ Then open:
 http://localhost:3000
 ```
 
-## Adding Audio
+---
 
-Place legally obtained/licensed audio files in:
+## 🎧 Adding Audio
+
+Place legally obtained/licensed audio files inside:
 
 ```text
 public/audio/
@@ -156,21 +197,35 @@ public/audio/
 └── ...
 ```
 
-A public asset can then be referenced as:
+A public asset can then be referenced by the application as:
 
 ```text
 /audio/softly.mp3
 ```
 
-Prefer simple, readable filenames. The application should not assume that every filename has the same format, so filenames containing spaces or other normal characters should be handled safely.
+### Audio Recommendations
+
+For maintainability:
+
+- Prefer readable filenames
+- Avoid unnecessary special characters
+- Keep one audio file per track
+- Use consistent naming conventions
+- Keep playlist metadata separate from UI components
+
+The application should safely handle filenames containing spaces and other normal characters.
 
 ### Copyright & Licensing
 
-Only host audio that you have the legal right to distribute. This project does not provide or endorse unauthorized downloads or redistribution of commercial music.
+Only host audio that you have the legal right to distribute.
 
-## Music Architecture
+This project does not provide or endorse unauthorized downloading, copying, or redistribution of commercial music.
 
-The player should use a single source of truth for playlist state and one persistent `HTMLAudioElement`.
+---
+
+## 🧠 Music Architecture
+
+The player is designed around a single source of truth for playlist state and one persistent `HTMLAudioElement`.
 
 ```text
 Playlist
@@ -202,15 +257,18 @@ Example playlist entry:
 }
 ```
 
-Keeping playlist metadata separate from UI components makes the player easier to extend.
+Keeping playlist metadata separate from UI components makes the player easier to extend with features such as search, shuffle, repeat, favorites and queues.
 
-## Testing
+---
+
+## 🧪 Testing
 
 Music functionality should be verified in a real browser rather than only through static code inspection.
 
 ### Functional Checklist
 
 - [ ] Application starts successfully
+- [ ] Hero UI renders correctly
 - [ ] Playlist opens
 - [ ] All expected songs appear
 - [ ] Selecting a song changes the current track
@@ -226,11 +284,11 @@ Music functionality should be verified in a real browser rather than only throug
 - [ ] Volume works
 - [ ] Mute works
 - [ ] Missing audio does not crash the application
-- [ ] No unexpected console errors
+- [ ] No unexpected browser-console errors
 - [ ] No failed audio requests
 - [ ] Mobile/touch interaction works
 
-Run the scripts available in `package.json`, for example:
+Run the scripts available in `package.json`:
 
 ```bash
 npm run lint
@@ -244,11 +302,14 @@ npm test
 npm run typecheck
 ```
 
-## Development Principles
+---
 
-### Preserve the visual identity
+## 🎯 Development Principles
 
-When adding functionality:
+### Preserve the Visual Identity
+
+When extending functionality:
+
 - Reuse existing components
 - Preserve typography and spacing
 - Preserve the cinematic aesthetic
@@ -256,7 +317,7 @@ When adding functionality:
 - Keep animations subtle
 - Maintain responsive behavior
 
-### Component architecture
+### Component Architecture
 
 Prefer focused responsibilities:
 
@@ -273,11 +334,15 @@ Hero
 
 Avoid creating competing audio instances when changing tracks.
 
-## Roadmap
+---
+
+## 🗺️ Roadmap
 
 ### Phase 1 — Core Player
+
 - [x] Custom music player foundation
 - [x] Local audio support
+- [x] Playlist audio assets
 - [ ] Playlist UI
 - [ ] Song selection
 - [ ] Robust next/previous behavior
@@ -287,6 +352,7 @@ Avoid creating competing audio instances when changing tracks.
 - [ ] Repeat
 
 ### Phase 2 — Personalization
+
 - [ ] Favorite songs
 - [ ] Recently played
 - [ ] Persistent player state
@@ -294,13 +360,15 @@ Avoid creating competing audio instances when changing tracks.
 - [ ] Listening statistics
 
 ### Phase 3 — Immersive Experience
+
 - [ ] Dynamic album artwork
 - [ ] Audio visualizer
 - [ ] Full-screen player
 - [ ] Animated track transitions
 - [ ] Properly licensed synchronized lyrics
 
-### Phase 4 — Artist/Release Experience
+### Phase 4 — Artist / Release Experience
+
 - [ ] Album/release pages
 - [ ] Latest releases
 - [ ] Official music-video links
@@ -309,6 +377,7 @@ Avoid creating competing audio instances when changing tracks.
 - [ ] Artist information
 
 ### Phase 5 — Platform Infrastructure
+
 - [ ] Authentication
 - [ ] User profiles
 - [ ] Cloud playlists
@@ -317,9 +386,13 @@ Avoid creating competing audio instances when changing tracks.
 - [ ] Analytics
 - [ ] Production monitoring
 
-## Deployment
+---
 
-A typical production workflow is:
+## 🌐 Deployment
+
+The application is deployed using Vercel.
+
+### Production Build
 
 ```bash
 npm install
@@ -328,11 +401,20 @@ npm run build
 npm start
 ```
 
-For larger media libraries, consider object storage and a CDN rather than placing large collections of audio directly in the application deployment.
+### Live Application
 
-## Security & Production Considerations
+The latest production deployment is available at:
+
+**https://kunjgymplaylist.vercel.app/**
+
+For larger media libraries, consider object storage and a CDN rather than placing a large collection of audio directly inside the application deployment.
+
+---
+
+## 🔐 Security & Production Considerations
 
 Before production deployment:
+
 - Keep secrets in environment variables.
 - Never expose private API keys in client-side code.
 - Validate external API responses.
@@ -342,7 +424,9 @@ Before production deployment:
 - Review copyright and licensing requirements for every asset.
 - Use object storage/CDN infrastructure for large media libraries.
 
-## Scalability
+---
+
+## 📈 Scalability
 
 A future production architecture could separate application traffic from media delivery:
 
@@ -373,7 +457,9 @@ Browser
 
 This allows the application and media-delivery layers to scale independently.
 
-## Contributing
+---
+
+## 🤝 Contributing
 
 For collaborative development:
 
@@ -381,25 +467,34 @@ For collaborative development:
 git checkout -b feature/your-feature
 ```
 
-Make focused changes, test locally, run lint/build checks, and commit with a descriptive message:
+Make focused changes, test locally, and run the project's validation checks.
+
+Example:
 
 ```bash
 git commit -m "feat: add playlist search"
 ```
 
 Pull requests should describe:
+
 - What changed
 - Why it changed
 - How it was tested
 - Known limitations
 
-## License
+---
+
+## 📄 License
 
 Unless a separate license file is provided, this project should be treated as private/proprietary.
 
-Third-party assets and media may have separate licenses and usage restrictions.
+Third-party assets, music, photographs, logos, trademarks, and other media may have their own licenses and usage restrictions.
 
-## Author
+Do not assume that an asset is free to redistribute simply because it is available online.
+
+---
+
+## 👨‍💻 Author
 
 **Kunj Maheshwari**
 
@@ -407,9 +502,11 @@ Software Engineer | QA Automation | Full-Stack Development | AI & LLM Engineerin
 
 GitHub: https://github.com/KunjMaheshwari
 
-## Project Vision
+---
 
-The long-term goal of **OG Websites** is to combine the visual impact of a cinematic artist website with the interaction model of a modern music application.
+## ⭐ Project Vision
+
+The long-term goal of **WinningSpeech** is to combine the visual impact of a cinematic artist website with the interaction model of a modern music application.
 
 ```text
 Cinematic Design
@@ -422,7 +519,7 @@ Immersive Visuals
        +
 Scalable Architecture
        =
-   OG Websites
+   WinningSpeech
 ```
 
 ---
