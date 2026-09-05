@@ -6,8 +6,6 @@ export function HeroEnvironmentLayer() {
       className="hero-layer absolute inset-0 overflow-hidden"
     >
       <div className="hero-environment-base" />
-      <div className="hero-skyline hero-skyline-far" />
-      <div className="hero-tree-band" />
     </div>
   );
 }

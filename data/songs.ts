@@ -5,15 +5,22 @@ export type Song = {
   album?: string;
   year?: number;
   artwork?: string;
+  audioSrc?: string;
   spotifyUrl?: string;
   youtubeUrl?: string;
 };
 
-// Placeholder data only. Real metadata should be added from verified official sources.
 export const songs: Song[] = [
   {
-    id: "placeholder-track",
-    title: "Track Placeholder",
+    id: "track-1",
+    title: "Track 01",
     artist: "Karan Aujla",
+    audioSrc: "/audio/track1.mp3",
+  },
+  {
+    id: "track-2",
+    title: "Track 02",
+    artist: "Karan Aujla",
+    audioSrc: "/audio/track2.mp3",
   },
 ];

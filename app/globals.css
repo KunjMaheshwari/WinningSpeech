@@ -117,164 +117,31 @@ a {
 
 .hero-environment-base {
   position: absolute;
-  inset: 28% 0 0;
-  background-image:
-    linear-gradient(180deg, transparent 0%, #0b0b0d 86%),
-    url("/images/hero/background.png");
+  inset: 0;
+  background-image: url("/images/hero/background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hero-skyline {
-  position: absolute;
-  width: 112%;
-  left: -6%;
-  bottom: 28%;
-  height: 28%;
-  background: #121217;
-  clip-path: polygon(
-    0% 100%,
-    0% 44%,
-    5% 42%,
-    8% 35%,
-    12% 33%,
-    16% 41%,
-    22% 38%,
-    25% 48%,
-    33% 39%,
-    39% 36%,
-    44% 47%,
-    52% 40%,
-    58% 46%,
-    66% 38%,
-    74% 34%,
-    79% 44%,
-    86% 38%,
-    92% 43%,
-    100% 40%,
-    100% 100%
-  );
-  opacity: 0.62;
-}
-
-.hero-skyline-far {
-  filter: blur(0.3px);
-}
-
-.hero-tree-band {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 25%;
-  height: 18%;
-  opacity: 0.5;
-  background: linear-gradient(180deg, transparent 8%, #0e0f13 90%);
-  clip-path: polygon(
-    0% 100%,
-    0% 66%,
-    7% 58%,
-    12% 64%,
-    20% 56%,
-    27% 61%,
-    33% 56%,
-    40% 62%,
-    47% 57%,
-    54% 61%,
-    63% 54%,
-    71% 60%,
-    78% 55%,
-    84% 62%,
-    91% 57%,
-    100% 64%,
-    100% 100%
-  );
-}
-
 .hero-midground-plane {
   position: absolute;
-  inset: 42% -8% 0;
-  background-image:
-    linear-gradient(180deg, #14151944 0%, #0a0b0f 96%),
-    url("/images/hero/midground.png");
-  background-position: center bottom;
+  inset: 0;
+  background-image: url("/images/hero/midground.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.hero-mid-shape {
-  position: absolute;
-  bottom: 15%;
-  background: #121216;
-  opacity: 0.74;
-}
-
-.hero-mid-shape-a {
-  left: 7%;
-  width: min(21vw, 330px);
-  height: min(28vh, 300px);
-  clip-path: polygon(0 100%, 0 28%, 26% 22%, 35% 4%, 78% 0, 100% 18%, 100% 100%);
-}
-
-.hero-mid-shape-b {
-  right: 14%;
-  width: min(27vw, 390px);
-  height: min(32vh, 340px);
-  clip-path: polygon(0 100%, 0 35%, 21% 32%, 44% 8%, 69% 10%, 100% 23%, 100% 100%);
-}
-
-.hero-pole {
-  position: absolute;
-  right: 36%;
-  bottom: 14%;
-  width: 3px;
-  height: min(24vh, 260px);
-  background: #2f3138;
-  opacity: 0.7;
 }
 
 .hero-foreground-plane {
   position: absolute;
-  left: -8%;
-  right: -8%;
-  bottom: 0;
-  height: 31%;
-  background-image:
-    linear-gradient(180deg, transparent 0%, #090a0d 100%),
-    url("/images/hero/foreground.png");
+  inset: 0;
+  background-image: url("/images/hero/foreground.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
 
-.hero-foreground-object {
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(180deg, #1d1d22 0%, #0f1115 100%);
-  opacity: 0.9;
-  box-shadow: var(--hero-shadow);
-}
-
-.hero-foreground-object-left {
-  left: -2%;
-  width: min(26vw, 300px);
-  height: min(40vh, 390px);
-  clip-path: polygon(0 100%, 0 26%, 32% 18%, 51% 0, 80% 4%, 100% 30%, 100% 100%);
-}
-
-.hero-foreground-object-right {
-  right: -3%;
-  width: min(23vw, 290px);
-  height: min(44vh, 420px);
-  clip-path: polygon(0 100%, 0 32%, 31% 22%, 58% 0, 77% 6%, 100% 28%, 100% 100%);
-}
-
-.hero-foreground-object-center {
-  left: 42%;
-  width: min(12vw, 150px);
-  height: min(20vh, 180px);
-  clip-path: polygon(0 100%, 0 25%, 20% 15%, 48% 0, 78% 18%, 100% 27%, 100% 100%);
-}
 
 .hero-haze {
   position: absolute;
@@ -320,43 +187,7 @@ a {
   }
 }
 
-@media (max-width: 1024px) {
-  .hero-foreground-object-left,
-  .hero-foreground-object-right {
-    height: min(34vh, 300px);
-  }
-
-  .hero-foreground-object-center {
-    left: 39%;
-  }
-}
-
 @media (max-width: 768px) {
-  .hero-skyline {
-    bottom: 31%;
-    height: 20%;
-    opacity: 0.52;
-  }
-
-  .hero-tree-band,
-  .hero-pole,
-  .hero-foreground-object-center {
-    display: none;
-  }
-
-  .hero-mid-shape-a,
-  .hero-mid-shape-b {
-    opacity: 0.6;
-    height: min(24vh, 220px);
-  }
-
-  .hero-foreground-object-left,
-  .hero-foreground-object-right {
-    width: min(31vw, 200px);
-    height: min(26vh, 190px);
-    opacity: 0.82;
-  }
-
   .hero-dust-field span:nth-child(odd) {
     display: none;
   }
