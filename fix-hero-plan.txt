@@ -1,0 +1,8 @@
+To fix the hero UI, we will:
+1. Remove all old image layers (sky.png, background.png, etc.)
+2. Use only master-reference.png as the artwork
+3. Ensure the image maintains its 1507x10.44 aspect ratio
+4. Position HTML UI elements relative to the master image
+5. Verify the final result matches the master image visually
+
+First, let's verify the master image dimensions:
